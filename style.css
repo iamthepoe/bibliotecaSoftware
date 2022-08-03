@@ -10,14 +10,17 @@
 body{
   background-color: var(--corPrincipal);
 }
+.tamanho{
+  width: 45vw;
+  margin-inline: auto;
+}
 header, .header{
   display: flex;
   justify-content: center;
   align-items: center;
 
   height: 12vh;
-  width: 100vw;
-  
+  width: 100%;
   color: var(--textColor);
 
   font-family: 'Rubik', sans-serif;
@@ -31,9 +34,12 @@ header, .header{
   flex-direction: column;
 
   height: 50vh;
-  width: 100vw;
 }
 .main, .img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   margin-block-end: 3vh;
 }
 .main, .inputs{
@@ -42,30 +48,26 @@ header, .header{
   align-items: center;
   flex-direction: column;
   gap: 2.5vh;
-
-  width: 30vw;
-  margin-inline: auto;
 }
 input{
-  border: 1px solid whitesmoke;
-  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
   padding: 0.7vw;
+
+  width: 100%;
 
   background-color: var(--corPrincipal);
   color: white;
-
-  width: 23vw;
 }
 ::placeholder{
   color: whitesmoke;
 }
 .bn632-hover {
-  width: 23vw;
+  width: 45vw;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  margin: 20px;
   height: 5vh;
   text-align:center;
   border: none;
