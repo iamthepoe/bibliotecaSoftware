@@ -11,7 +11,7 @@ body{
   background-color: var(--corPrincipal);
 }
 .tamanho{
-  width: 45vw;
+  width: 48vw;
   margin-inline: auto;
 }
 header, .header{
@@ -63,7 +63,7 @@ input{
   color: whitesmoke;
 }
 .bn632-hover {
-  width: 45vw;
+  width: 48vw;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
