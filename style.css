@@ -11,7 +11,7 @@ body{
   background-color: var(--corPrincipal);
 }
 .tamanho{
-  width: 48vw;
+  width: 60vw;
   margin-inline: auto;
 }
 header, .header{
@@ -33,7 +33,7 @@ header, .header{
   align-items: center;
   flex-direction: column;
 
-  height: 50vh;
+  height: 70vh;
 }
 .main, .img{
   display: flex;
@@ -54,21 +54,30 @@ input{
   border-bottom: 1px solid whitesmoke;
   padding: 0.7vw;
 
-  width: 100%;
+  transition: width 0.3s ease-in-out;
+
+  width: 90%;
 
   background-color: var(--corPrincipal);
   color: white;
+  outline: none;
+}
+input:focus{
+  width: 100%;
 }
 ::placeholder{
   color: whitesmoke;
 }
+main form #forgetPassword{
+  color: #0ba360;
+}
 .bn632-hover {
-  width: 48vw;
+  width: 54vw;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  height: 5vh;
+  height: 6vh;
   text-align:center;
   border: none;
   background-size: 300% 100%;
@@ -85,6 +94,8 @@ input{
   -o-transition: all .4s ease-in-out;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
+  transition: width 0.3s ease-in-out;
+  width: 60vw;
 }
 
 .bn632-hover:focus {
