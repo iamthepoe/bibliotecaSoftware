@@ -3,106 +3,62 @@
   padding: 0;
   box-sizing: border-box;
 }
+body{
+  background-color: var(--corPrincipal);
+}
+hr{
+  border: none;
+  border-top: 1px solid var(--textColor);
+}
 :root{
   --corPrincipal: rgb(107, 191, 164);
   --textColor: rgb(237, 236, 227);
 }
-body{
+.header{
   background-color: var(--corPrincipal);
-}
-.tamanho{
-  width: 60vw;
-  margin-inline: auto;
-}
-header, .header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   height: 12vh;
-  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.header .showMenu a{
+  text-decoration: none;
   color: var(--textColor);
 
+  font-size: 25px;
+}
+.header .logo a{
   font-family: 'Rubik', sans-serif;
   font-family: 'Square Peg', cursive;
   font-size: 60px;
+
+  color: var(--textColor);
+  text-decoration: none;
+}
+.header .config button{
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.header .config button img{
+  width: 50px;
+}
+.header .config button img:hover{
+  transition: width 0.5s ease-in-out;
+  width: 55px;
 }
 .main{
+  height: 88vh;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-
-  height: 70vh;
-}
-.main, .img{
-  display: flex;
-  justify-content: center;
   align-items: center;
 
-  margin-block-end: 3vh;
+  justify-content: space-around;
 }
-.main, .inputs{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2.5vh;
-}
-input{
-  border: none;
-  border-bottom: 1px solid whitesmoke;
-  padding: 0.7vw;
-
-  transition: width 0.3s ease-in-out;
-
-  width: 90%;
-
-  background-color: var(--corPrincipal);
-  color: white;
-  outline: none;
-}
-input:focus{
-  width: 100%;
-}
-::placeholder{
-  color: whitesmoke;
-}
-main form #forgetPassword{
-  color: #0ba360;
-}
-.bn632-hover {
-  width: 54vw;
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  height: 6vh;
-  text-align:center;
-  border: none;
-  background-size: 300% 100%;
-  border-radius: 50px;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-}
-
-.bn632-hover:hover {
-  background-position: 100% 0;
-  moz-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  transition: width 0.3s ease-in-out;
-  width: 60vw;
-}
-
-.bn632-hover:focus {
-  outline: none;
-}
-
-.bn632-hover.bn22 {
+.main .divButton .buttonDefault{
   background-image: linear-gradient(
     to right,
     #0ba360,
@@ -111,4 +67,19 @@ main form #forgetPassword{
     #2bb673
   );
   box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+
+  color: var(--textColor);
+  border: none;
+  border-radius: 3px;
+
+  width: 50vw;
+  height: 5vh;
+
+  cursor: pointer;
+
+  padding: 1vh;
+}
+.main .divButton .buttonDefault:hover{
+  transition: width 0.5s ease-in-out;
+  width: 55vw;
 }
