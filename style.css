@@ -11,7 +11,7 @@ hr{
   border-top: 1px solid var(--textColor);
 }
 :root{
-  --corPrincipal: rgb(107, 191, 164);
+  --corPrincipal: #1B3D26;
   --textColor: rgb(237, 236, 227);
 }
 .header{
@@ -21,7 +21,7 @@ hr{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
 .header .showMenu a{
   text-decoration: none;
@@ -29,7 +29,7 @@ hr{
 
   font-size: 25px;
 }
-.header .logo a{
+.header .textLogo a{
   font-family: 'Rubik', sans-serif;
   font-family: 'Square Peg', cursive;
   font-size: 60px;
@@ -49,8 +49,8 @@ hr{
   transition: width 0.5s ease-in-out;
   width: 55px;
 }
-.main{
-  height: 88vh;
+.menuPage{
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@ hr{
 
   justify-content: space-around;
 }
-.main .divButton .buttonDefault{
+.divButton .buttonDefault{
   background-image: linear-gradient(
     to right,
     #0ba360,
@@ -79,7 +79,49 @@ hr{
 
   padding: 1vh;
 }
-.main .divButton .buttonDefault:hover{
+.divButton .buttonDefault:hover{
   transition: width 0.5s ease-in-out;
   width: 55vw;
+}
+.main{
+  height: 88vh;
+
+  background-color: var(--textColor);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3vh;
+  flex-wrap: wrap;
+}
+.main .divButton{
+  display: flex;
+  justify-content: center;
+}
+.main .logo{
+  display: flex;
+  align-items: center;
+}
+.main .textContent{
+  width: 80vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  gap: 3vh;
+  flex-wrap: wrap;
+
+}
+h1{
+  color: #1B3D26;
+  font-family: 'Open Sans', sans-serif;
+}
+h3{
+  color: #1B3D26;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
 }
