@@ -1,5 +1,4 @@
-CREATE DATABASE projetobiblioteca;
-USE projetobiblioteca;
+USE bairpfhw_projetobiblioteca;
 
 CREATE TABLE usuario(
 	rm INT PRIMARY KEY NOT NULL,
