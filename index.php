@@ -127,16 +127,15 @@
 
     <title>Login</title>
   </head>
-  <body>
+<body>
     <div class="tamanho">
       <header class="header">
         <div class="textLogo"><span>AdInfinitum</span></div>
       </header>
-    </div>
     <main class="main">
       <div class="img">
         <a href="pagesHtml/pageMain.html"
-          ><img src="pagesHtml/img/logo.png" alt="Livro svg" width="225px"
+          ><img src="img/logo.png" alt="Livro svg" width="225px"
         /></a>
       </div>
       <form action="" method="POST" id="entrar" class="inputs">
@@ -164,15 +163,19 @@ include('biblioteca.php');
         if($user->user_status == 'bloqueado'){
           echo 'Usuário bloqueado.';
         } else{
-          $user = $resultado['dados'];
-          $_SESSION['rm'] = $user->rm;
-          $_SESSION['nome'] = $user->nome;
-          $_SESSION['email'] = $user->email;
-          $_SESSION['senha'] = $user->senha;
-          $_SESSION['perfil'] = $user->perfil;
-          $_SESSION['user_status'] = $user->user_status;
-          $_SESSION['adm'] = $user->adm;
-          header('location: pageMain.php');
+          if($user->adm ==0){
+            $user = $resultado['dados'];
+            $_SESSION['rm'] = $user->rm;
+            $_SESSION['nome'] = $user->nome;
+            $_SESSION['email'] = $user->email;
+            $_SESSION['senha'] = $user->senha;
+            $_SESSION['perfil'] = $user->perfil;
+            $_SESSION['user_status'] = $user->user_status;
+            $_SESSION['adm'] = $user->adm;
+            header('location: pageMain.php');
+          } else{
+            header('location: adm.php;');
+          }
         }
     }
   }
